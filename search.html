@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<!-- SITE NOT YET RESPONSIVE-->
+<!-- CREATED / TESTED ON MICROSOFT EDGE-->
+
+<html>
+<head>
+    <title>SEARCH RESULTS</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Bootstrap JavaScript Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Some meta info -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Jay Rivard">
+    <!-- ARRAY OF OBJECTS -->
+    <script src="../js/product-array.js" defer></script>
+    <!-- MY SCRIPT -->
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <!-- NAVBAR LOGO -->
+    <a class="navbar-brand" href="index.html"><img src="../images/logo.png" class="nav-logo"></a>
+    <!-- COLLAPSED NAVBAR BUTTON -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- NAVBAR LINKS -->
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="fall.html">Fall</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="winter.html">Winter</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="spring.html">Spring</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="summer.html">Summer</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="sales.html">Sales</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="sign-in.html"><strong>Sign in / Sign up</strong></a>
+        </li>
+      </ul>
+      <!-- NAVBAR SEARCH BAR & CART BUTTON -->
+      <div class="d-flex">
+        <a type="button" href="cart.html" class="btn btn-outline-dark cart-button">&#x1F6D2</a>
+        <form class="d-flex custom-input" method="GET" action="search.html">
+            <input class="form-control search-bar" id="search" type="search" placeholder="Search" name="searchTerm" aria-label="Search">
+            <button type="submit" class="btn btn-outline-dark search-button">SEARCH</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HORIZONTAL RULE -->
+  <div class="container">
+      <hr class="main-rule">
+  </div>
+
+  <!-- SEARCH RESULT ITEM CONTAINERS -->
+  <div class="container">
+    <!-- SORT DROPDOWN -->
+    <div class="row justify-content-end">
+      <div class="col-sm-2 sort">
+          <div class="dropdown">
+            <button class="btn btn-secondary" type="button" id="sortDropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Sort
+            </button>
+            <div class="dropdown-menu" aria-labelledby="sortDropdownMenuButton">
+              <a class="dropdown-item" href="search.html?sort=price-low-to-high">By price (lowest to highest)</a>
+              <a class="dropdown-item" href="search.html?sort=price-high-to-low">By price (highest to lowest)</a>
+              <a class="dropdown-item" href="search.html?sort=rating-low-to-high">By rating (lowest to highest)</a>
+              <a class="dropdown-item" href="search.html?sort=rating-high-to-low">By rating (highest to lowest)</a>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- ITEM FILTERS -->
+    <div id="items-list" class="row">
+        <div class="col-md-2 col-sm-5 col-12 filter top d-flex flex-column">
+          <h4 class="filter-text"><strong>Filter by:</strong></h4>
+          <div class="list-group-flush">
+              <!-- FILTER BY COLOR -->
+              <button class="btn dropdown-toggle filter-dropdown-button" type="button" id="colorDropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Color
+              </button>
+              <div class="dropdown-menu" aria-labelledby="colorDropdownMenuButton">
+                  <a class="dropdown-item" href="search.html?color=red">Red</a>
+                  <a class="dropdown-item" href="search.html?color=green">Green</a>
+                  <a class="dropdown-item" href="search.html?color=blue">Blue</a>
+                  <a class="dropdown-item" href="search.html?color=white">White</a>
+                  <a class="dropdown-item" href="search.html?color=other">Other</a>
+              </div>
+              <!-- FILTER BY PRICE -->
+              <button class="btn dropdown-toggle filter-dropdown-button" type="button" id="priceDropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Price
+              </button>
+              <div class="dropdown-menu" aria-labelledby="priceDropdownMenuButton">
+                  <a class="dropdown-item" href="search.html?price=0-10">$0-$10</a>
+                  <a class="dropdown-item" href="search.html?price=10-20">$10-$20</a>
+                  <a class="dropdown-item" href="search.html?price=20-30">$20-$30</a>
+                  <a class="dropdown-item" href="search.html?price=30-50">$30-$50</a>
+              </div>
+              <!-- FILTER BY RATING -->
+              <button class="btn dropdown-toggle filter-dropdown-button" type="button" id="ratingDropdownMenuButton" data-bs-toggle="dropdown"  aria-expanded="false">
+                  Rating
+              </button>
+              <div class="dropdown-menu" aria-labelledby="ratingDropdownMenuButton">
+                  <a class="dropdown-item" href="search.html?rating=1">1 Star</a>
+                  <a class="dropdown-item" href="search.html?rating=2">2 Star</a>
+                  <a class="dropdown-item" href="search.html?rating=3">3 Star</a>
+                  <a class="dropdown-item" href="search.html?rating=4">4 Star</a>
+                  <a class="dropdown-item" href="search.html?rating=5">5 Star</a>
+              </div>
+          </div>
+        </div> 
+    </div>
+  </div>
+
+  <!-- HORIZONTAL RULE -->
+  <div class="container">
+      <hr class="main-rule">
+  </div>
+
+  <div class="container">
+    <div class="row d-block sale-box text-center">
+        <p class="sale-box-text mx-auto mb-5"> ~ 50% OFF ALL FALL COLLECTION CANDLES ~</p>
+        <a type="button" href="sales.html" class="btn sale-box-button mx-auto">BROWSE SALES</a>
+    </div>
+  </div>
+
+  <!-- FOOTER W/ EMAIL ENTRY -->
+  <nav class="navbar sticky-bottom navbar-light footer justify-content-center">
+      <h5 class="enter-email">Enter your email to be notified about our latest deals!</h5>
+      <form class="form-group">
+        <input name="csrf" type="email" placeholder="Enter your email here">
+        <button type="submit" class="email-button btn">Submit</button>
+      </form>
+  </nav>
+
+</body>
+</html>
+
+<!--
+PICTURE SOURCES :
+
+    UNSPLASH:  https://unsplash.com/
+    PIXABAY: https://pixabay.com/
+    PEXELS: https://www.pexels.com/
+
+HELP SOURCES : 
+
+    W3SCHOOLS: https://www.w3schools.com/
+    BOOTSTRAP DOCS: https://getbootstrap.com/docs/5.0/getting-started/introduction/
+
+-->

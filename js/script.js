@@ -151,7 +151,7 @@ if(document.URL.includes("/index.html" || "/item.html" )) {
             <div class="col-sm recommended-box d-flex flex-column">
                 <button type="button" class="btn add-to-cart" id="add-to-cart">ADD TO CART</button>
                 <div class="recommended-box-info">
-                <a class="recommended-box-text" href="../item.html?id=${products[0].id}">${products[0].title}</a>
+                <a class="recommended-box-text" href="item.html?id=${products[0].id}">${products[0].title}</a>
                 <p class="recommended-box-text">$${products[0].price}.00<br>${star.repeat(products[0].rating)}</p>  
                 </div>
                 <div class="container-fluid d-flex flex-column">
@@ -161,7 +161,7 @@ if(document.URL.includes("/index.html" || "/item.html" )) {
             <div class="col-sm recommended-box d-flex flex-column">
                 <button type="button" class="btn add-to-cart" id="add-to-cart">ADD TO CART</button>
                 <div class="recommended-box-info">
-                <a class="recommended-box-text" href="../item.html?id=${products[1].id}">${products[1].title}</a>
+                <a class="recommended-box-text" href="item.html?id=${products[1].id}">${products[1].title}</a>
                 <p class="recommended-box-text">$${products[1].price}.00<br>${star.repeat(products[1].rating)}</p>  
                 </div>
                 <div class="container-fluid d-flex flex-column">
@@ -171,7 +171,7 @@ if(document.URL.includes("/index.html" || "/item.html" )) {
             <div class="col-sm recommended-box d-flex flex-column">
                 <button type="button" class="btn add-to-cart" id="add-to-cart">ADD TO CART</button>
                 <div class="recommended-box-info">
-                <a class="recommended-box-text" href="../item.html?id=${products[2].id}">${products[2].title}</a>
+                <a class="recommended-box-text" href="item.html?id=${products[2].id}">${products[2].title}</a>
                 <p class="recommended-box-text">$${products[2].price}.00<br>${star.repeat(products[2].rating)}</p>  
                 </div>
                 <div class="container-fluid d-flex flex-column">
@@ -188,7 +188,7 @@ products.forEach(function(item){
             saleSeasonContainer.innerHTML += `<div class="col-sm recommended-box d-flex flex-column">
                                             <button type="button" class="btn add-to-cart" id="add-to-cart">ADD TO CART</button>
                                             <div class="recommended-box-info">
-                                                <a class="recommended-box-text" href="../item.html?id=${item.id}">${item.title}</a>
+                                                <a class="recommended-box-text" href="item.html?id=${item.id}">${item.title}</a>
                                                 <p class="recommended-box-text">$${item.price}.00<br>${star.repeat(item.rating)}</p>  
                                             </div>
                                             <div class="container-fluid d-flex flex-column">
@@ -203,7 +203,7 @@ products.forEach(function(item){
             saleSeasonContainer.innerHTML += `<div class="col-sm recommended-box d-flex flex-column">
                                             <button type="button" class="btn add-to-cart" id="add-to-cart">ADD TO CART</button>
                                             <div class="recommended-box-info">
-                                                <a class="recommended-box-text" href="../item.html?id=${item.id}">${item.title}</a>
+                                                <a class="recommended-box-text" href="item.html?id=${item.id}">${item.title}</a>
                                                 <p class="recommended-box-text">$${item.price}.00<br>${star.repeat(item.rating)}</p>  
                                             </div>
                                             <div class="container-fluid d-flex flex-column">
@@ -218,7 +218,7 @@ products.forEach(function(item){
             saleSeasonContainer.innerHTML += `<div class="col-sm recommended-box d-flex flex-column">
                                             <button type="button" class="btn add-to-cart" id="add-to-cart">ADD TO CART</button>
                                             <div class="recommended-box-info">
-                                                <a class="recommended-box-text" href="../item.html?id=${item.id}">${item.title}</a>
+                                                <a class="recommended-box-text" href="item.html?id=${item.id}">${item.title}</a>
                                                 <p class="recommended-box-text">$${item.price}.00<br>${star.repeat(item.rating)}</p>  
                                             </div>
                                             <div class="container-fluid d-flex flex-column">
@@ -233,7 +233,7 @@ products.forEach(function(item){
             saleSeasonContainer.innerHTML += `<div class="col-sm recommended-box d-flex flex-column">
                                             <button type="button" class="btn add-to-cart" id="add-to-cart">ADD TO CART</button>
                                             <div class="recommended-box-info">
-                                                <a class="recommended-box-text" href="../item.html?id=${item.id}">${item.title}</a>
+                                                <a class="recommended-box-text" href="item.html?id=${item.id}">${item.title}</a>
                                                 <p class="recommended-box-text">$${item.price}.00<br>${star.repeat(item.rating)}</p>  
                                             </div>
                                             <div class="container-fluid d-flex flex-column">
@@ -248,7 +248,7 @@ products.forEach(function(item){
             saleSeasonContainer.innerHTML += `<div class="col-sm recommended-box d-flex flex-column">
                                             <button type="button" class="btn add-to-cart" id="add-to-cart">ADD TO CART</button>
                                             <div class="recommended-box-info">
-                                                <a class="recommended-box-text" href="../item.html?id=${item.id}">${item.title}</a>
+                                                <a class="recommended-box-text" href="item.html?id=${item.id}">${item.title}</a>
                                                 <p class="recommended-box-text">$${item.price}.00<br>${star.repeat(item.rating)}</p>  
                                             </div>
                                             <div class="container-fluid d-flex flex-column">
@@ -264,7 +264,7 @@ products.forEach(function(item){
             cartContainer.innerHTML  +=      `<hr>
                                     <div class="flex-row cart-container d-flex">
                                         <img class="cart-picture" src="${item.picture}">
-                                        <p class="d-block cart-text"><a class="recommended-box-text cart-link" href="../item.html?id=${item.id}"><b>${item.title}</b></a><br>$${item.price}.00<br><br><br>______<br>Wick Type: ${item.wickType}<br>Color: ${item.color}<br>Scent: ${item.scent}</p>
+                                        <p class="d-block cart-text"><a class="recommended-box-text cart-link" href="item.html?id=${item.id}"><b>${item.title}</b></a><br>$${item.price}.00<br><br><br>______<br>Wick Type: ${item.wickType}<br>Color: ${item.color}<br>Scent: ${item.scent}</p>
                                         <label for="formSelect" class="cart-text quantity-text">QUANTITY</label>
                                         <div class="form-group">
                                             <select class="form-control" id="formSelect">
@@ -288,7 +288,7 @@ products.forEach(function(item) {
     const itemTemplate =    `<div class="col-md-2 col-sm-5 col-12 search-result-item top d-flex flex-column">
                                 <button type="button" class="btn add-to-cart" id="add-to-cart">ADD TO CART</button>
                                 <div class="recommended-box-info">
-                                    <a href="../item.html?id=${item.id}" class="item-title">${item.title}</a>
+                                    <a href="item.html?id=${item.id}" class="item-title">${item.title}</a>
                                     <p class="recommended-box-text">$${item.price}.00<br>${itemRating}</p>  
                                 </div>
                                 <div class="container-fluid">

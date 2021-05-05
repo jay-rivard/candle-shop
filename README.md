@@ -17,7 +17,7 @@ The included code/deployment is a simple static version of the website.
 	The website runs & was tested on XAMPP Web Server.
 	The connected MySQL database contains a single PRODUCT table (attached below is an image).
 		
-https://user-images.githubusercontent.com/78338972/117090337-19507d80-ad26-11eb-989c-b5ae34704567.PNG
+	https://user-images.githubusercontent.com/78338972/117090337-19507d80-ad26-11eb-989c-b5ae34704567.PNG 
 	
 The class in which this assignment was given did not teach responsive or accessible website design. Subsequently, the site is not yet responsive but will be updated in the future.
 

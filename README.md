@@ -2,7 +2,8 @@
 
 E-commerce website created as a school project, tested exclusively on Microsoft Edge & created on VS Code.
 
-	*** WEBSITE IS NOT CROSS BROWSER COMPATIBLE - LARGELY INCOMPATIBLE WITH SAFARI, MINOR SIZING ERRORS WITH CHROME ***
+	*** WEBSITE IS NOT CROSS BROWSER COMPATIBLE ***
+	*** WEBSITE IS NOT YET RESPONSIVE (NOT COVERED IN CLASS) ***
 	
 Site can be seen at : https://jay-rivard.github.io/candle-shop/
 
